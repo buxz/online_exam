@@ -83,7 +83,7 @@ public class SystemLogin extends HttpServlet{
 				req.getSession().setAttribute("userInof", userInfoMap);
 				req.getSession().setAttribute(UserInfo.username.toString(),userInfoMap.get(UserInfo.username.toString()));
 				//转发视图
-				req.getRequestDispatcher("WEB-INF/view/main.jsp").forward(req, resp);
+				req.getRequestDispatcher("/main").forward(req, resp);
 			}else{
 				resp.sendRedirect("/login?msg=1");
 			}
